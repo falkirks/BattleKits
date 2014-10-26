@@ -1,0 +1,23 @@
+name: BattleKits
+main: battlekits\BattleKits
+version: 0.1
+author: Falk
+api: [1.0.0]
+load: POSTWORLD
+softdepend: ["EconomyAPI", "PocketMoney"]
+permissions:
+ battlekits:
+  default: op
+  description: Top level BuyCraft permission
+  children:
+   battlekits.use:
+    default: op
+   battlekits.listkits:
+    default: true
+   battlekits.sign:
+    default: op
+    children:
+     battlekits.sign.use:
+      default: true
+     battlekits.sign.create:
+      default: op
