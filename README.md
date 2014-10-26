@@ -1,4 +1,4 @@
-BattleKits
+![BattleKits Logo](https://dl.dropboxusercontent.com/s/ne3a0iiccrxqw4e/battlekits.png.-m1.png)  BattleKits
 ==========
 
 BattleKits is a shiny new kit plugin for PocketMine. It is essential to any KitPvP server. 
@@ -11,3 +11,7 @@ BattleKits is a shiny new kit plugin for PocketMine. It is essential to any KitP
 * Allows for custom economy APIs
 * Create signs for players to get kits
 
+### Credits
+* This plugin was inspired by BattleKits for bukkit and I would like to thank all the devlopers there for making such a great plugin.
+* For fault of a better I have used the BattleKits for Bukkit logo. This is not my property and is licensed under GPLv3 (I think).
+* Finally I would like to thank @ZenCloud for requesting the plugin in the first place and helping guide the project.
