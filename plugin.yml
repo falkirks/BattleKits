@@ -1,6 +1,6 @@
 name: BattleKits
 main: battlekits\BattleKits
-version: 0.1
+version: 1.0
 author: Falk
 api: [1.0.0]
 load: POSTWORLD
