@@ -28,6 +28,7 @@ class BattleKits extends PluginBase{
     private $kitHistoryStore;
     public function onEnable(){
         $this->saveDefaultConfig();
+
         $this->economyLoader = new EconomyLoader($this);
         $this->economyLoader->load();
 
