@@ -8,7 +8,6 @@ use battlekits\kit\KitHistoryStore;
 use battlekits\kit\KitPaymentController;
 use battlekits\kit\KitStore;
 use battlekits\sign\SignListener;
-use pocketmine\permission\Permission;
 use pocketmine\plugin\PluginBase;
 
 class BattleKits extends PluginBase{

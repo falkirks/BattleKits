@@ -1,7 +1,7 @@
 name: BattleKits
 main: battlekits\BattleKits
 version: 1.0.1
-author: Falk
+author: Falkirks
 api: [1.0.0]
 load: POSTWORLD
 softdepend: ["EconomyAPI", "PocketMoney"]
