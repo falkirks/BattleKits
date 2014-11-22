@@ -14,11 +14,11 @@ class KitStore implements Listener{
         $this->plugin = $plugin;
         foreach($this->getPlugin()->getConfig()->get('kits') as $name => $kitData){
             $perm = new Permission("battlekits.use.$name", "Apply $name kit");
-            $perm->addParent("battlekits.use", true);
             $this->getPlugin()->getServer()->getPluginManager()->addPermission($perm);
-
+            $perm->addParent("battlekits.use", true);
             $this->kits[$name] = new Kit($kitData, $this->getPlugin());
         }
+        $this->getPlugin()->getLogger()->info("Loaded " . count($this->kits) . " kits.");
     }
     /**
      * @return \battlekits\kit\Kit[]
