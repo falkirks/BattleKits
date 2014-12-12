@@ -12,7 +12,7 @@ class KitPaymentController{
     public function grantKit($name, Player $player){
         $kit = $this->getPlugin()->getKitStore()->getKit($name);
         if($kit !== false){
-            if($player->hasPermission("battlekits.kit.$name")){
+            if($player->hasPermission("battlekits.use.$name")){
                 if($kit->isActiveIn($player->getLevel())){
                     if($this->getPlugin()->getKitHistoryStore()->canUse($player)){
                         if(!$kit->isFree()){
