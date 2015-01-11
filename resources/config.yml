@@ -21,7 +21,7 @@ econ-prefix: $
 sign-trigger: "[BattleKits]"
     # Signs will be treated as kit signs if this is on the first line
     # Changing it may cause some issues
-preferred-economy: "battlekits\\economy\\Economy"
+preferred-economy: false
     # If you have multiple economies set the one you want here, set to false to just auto-detect
     # You can set an economy of your own provided that class loads before BattleKits
     # battlekits\\economy\\Economy and battlekits\\economy\\PocketMoney are built in
