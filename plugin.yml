@@ -8,7 +8,6 @@ softdepend: ["EconomyAPI", "PocketMoney"]
 permissions:
  battlekits:
   default: op
-  description: Top level BuyCraft permission
   children:
    battlekits.use:
     default: op
