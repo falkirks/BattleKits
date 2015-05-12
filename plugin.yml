@@ -1,6 +1,6 @@
 name: BattleKits
 main: battlekits\BattleKits
-version: 1.0.3
+version: 1.0.4
 author: Falkirks
 api: [1.0.0]
 load: POSTWORLD
