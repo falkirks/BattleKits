@@ -36,7 +36,7 @@ class SignListener implements Listener{
         if($sign instanceof Sign){
             $text = $sign->getText();
             if($text[0] === $this->getPlugin()->getConfig()->get('sign-trigger') && !empty($text[1])){
-                if($event->getPlayer()->hasPermission("battlekits.sign.create")){
+                if($event->getPlayer()->hasPermission("battlekits.sign.use")){
                     $this->getPlugin()->getKitPaymentController()->grantKit($text[1], $event->getPlayer());
                 }
                 else{
