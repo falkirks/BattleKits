@@ -31,6 +31,7 @@ kits:
       - 'world'
       - 'word_nether'
       - 'word_end'
+    cost: 100
     commands:  # Executed on kit give
       - 'tell {player} Enjoy your kit :)'
     on-give-message: "You're now an archer" #Message displayed when kit is delivered
