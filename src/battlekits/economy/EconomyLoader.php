@@ -46,6 +46,17 @@ class EconomyLoader{
                 $this->plugin->getLogger()->info("Loaded " . $econ->getName());
                 return;
             }
+
+            /*
+             * Try loading Essentials
+             */
+            $econ = new EssentialsEconomy($this->plugin);
+            if($econ->isReady()){
+                $this->plugin->setEconomy($econ);
+                $this->plugin->getLogger()->info("Loaded " . $econ->getName());
+                return;
+            }
+
             $this->plugin->getLogger()->critical("No economy found, an economy is not required but certain features will be unavailable.");
         }
     }

@@ -1,6 +1,7 @@
 <?php
 namespace battlekits\economy;
 
+use onebone\economyapi\EconomyAPI;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 
@@ -17,6 +18,21 @@ class Economy extends BaseEconomy{
         if(!$this->checkReady()) return false;
         return ($this->getAPI()->setMoney($player, $amt) === 1);
     }
+    public function getBal(Player $player){
+        if(!$this->checkReady()) return false;
+        //TODO there is probably a better way to do this
+        $money = $this->getAPI()->getAllMoney();
+        if(isset($money["money"][strtolower($player->getName())])){
+            return $money["money"][strtolower($player->getName())];
+        }
+        else{
+            return false;
+        }
+    }
+
+    /**
+     * @return EconomyAPI
+     */
     public function getAPI(){
         return $this->getPlugin()->getServer()->getPluginManager()->getPlugin("EconomyAPI");
     }
