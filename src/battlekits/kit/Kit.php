@@ -41,6 +41,18 @@ class Kit{
         else{
             $this->cost = false;
         }
+		if(isset($kitData['on-give-title'])){
+            $this->onGiveTitle = $kitData['on-give-title'];
+        }
+        else{
+            $this->onGiveTitle = false;
+        }
+		if(isset($kitData['title-kit-name'])){
+            $this->onGiveKitNameTitle = $kitData['title-kit-name'];
+        }
+        else{
+            $this->onGiveKitNameTitle = false;
+        }
         if(isset($kitData['items']) && count($kitData['items']) > 0){
             $this->items = [];
             foreach($kitData['items'] as $slotId => $itemStr){
@@ -98,6 +110,9 @@ class Kit{
         }
         if($this->onGiveMessage !== false){
             $p->sendMessage($this->onGiveMessage);
+        }
+		if($this->onGiveMessage !== false){
+	        $p->addTitle($this->onGiveKitNameTitle, $this->onGiveTitle);
         }
     }
     public function getCommands(){
